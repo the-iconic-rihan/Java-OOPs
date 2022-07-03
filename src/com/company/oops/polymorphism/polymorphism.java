@@ -1,6 +1,6 @@
 package com.company.oops.polymorphism;
 
-//polymorphism with hierarchical inheritance.
+//dynamic/Runtime polymorphism with hierarchical inheritance.
 class shape {
     int length, breadth;
     float Area;
@@ -12,7 +12,7 @@ class shape {
     public shape(int length, int breadth) {
         this.length = length;
         this.breadth = breadth;
-//        System.out.println("I' in shape.");
+        System.out.println("Polymorphism class.");
     }
 
     public shape() {
@@ -32,6 +32,7 @@ class circle extends shape {
         this.r = r;
     }
 
+    @Override
     void area() {
         Area = (float) (2 * 3.14 * this.r * this.r);
 
@@ -44,6 +45,7 @@ class triangle extends shape {
         super(length, breadth);
     }
 
+    @Override
     void area() {
         int Area = (length + breadth) / 2;
         System.out.println("I'm in triangle area function" + " " + Area);
