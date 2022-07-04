@@ -1,6 +1,6 @@
 package com.company.oops.polymorphism;
 
-//dynamic/Runtime polymorphism with hierarchical inheritance.
+//dynamic/Runtime polymorphism with multiple  inheritance.
 class shape {
     int length, breadth;
     float Area;
@@ -22,6 +22,9 @@ class shape {
     void area() {
         System.out.println("I'm in Shape area function");
     }
+    static void greeting(){
+        System.out.println("Hey I'm in shape class, greetings!");
+    }
 }
 
 class circle extends shape {
@@ -38,6 +41,10 @@ class circle extends shape {
 
         System.out.println("I'm in circle area function" + " " + Area);
     }
+//    overriding of static is not possible
+    static void greeting(){
+        System.out.println("Hey I'm in shape class, greetings!");
+    }
 }
 
 class triangle extends shape {
@@ -49,6 +56,13 @@ class triangle extends shape {
     void area() {
         int Area = (length + breadth) / 2;
         System.out.println("I'm in triangle area function" + " " + Area);
+    }
+
+    @Override
+    public String toString() {
+        return "triangle{" +
+                "length=" + length +
+                '}';
     }
 }
 
@@ -72,11 +86,13 @@ public class polymorphism {
     public static void main(String[] args) {
 //        square obj = new square(12, 45);
         shape obj1 = new shape(12, 650);
-
+        shape.greeting();
 //        obj1.area();
-        final circle obj2 = new circle(3);
-        obj2.length = 55;
+        circle obj2 = new circle(3);
         obj2.area();
+
+        shape obj3 = new triangle(1, 5);
+        System.out.println(obj3);
 
     }
 
