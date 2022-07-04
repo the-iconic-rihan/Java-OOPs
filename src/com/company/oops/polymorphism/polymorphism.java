@@ -72,9 +72,12 @@ public class polymorphism {
     public static void main(String[] args) {
 //        square obj = new square(12, 45);
         shape obj1 = new shape(12, 650);
+
 //        obj1.area();
-        circle obj2 = new circle(3);
+        final circle obj2 = new circle(3);
+        obj2.length = 55;
         obj2.area();
 
     }
+
 }
