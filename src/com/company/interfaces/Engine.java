@@ -3,6 +3,7 @@ package com.company.interfaces;
 public interface Engine {
     static final int PRICE = 458632;
 
+    //the methods are abstract and public by default in interfaces.
     void start();
 
     void stop();

@@ -8,6 +8,7 @@ public class Main {
 //        car.stop();
 
         niceCar car = new niceCar();
+        niceCar car1 = new niceCar();
         car.start();
         car.startMusic();
         car.stopMusic();

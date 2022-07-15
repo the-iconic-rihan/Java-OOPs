@@ -2,7 +2,7 @@ package com.company.interfaces;
 
 public class niceCar {
     private Engine engine;
-    private Media player = new CDPlayer();
+    private final Media player = new CDPlayer();
 
     public niceCar() {
         engine = new powerEngine();
@@ -10,6 +10,7 @@ public class niceCar {
 
     public niceCar(Engine engine) {
         this.engine = engine;
+//        System.out.println(this.engine);
     }
 
     public void start() {
@@ -28,7 +29,7 @@ public class niceCar {
         player.stop();
     }
 
-    public void updtageEngine(Engine engne) {
+    public void updtageEngine(Engine engine) {
         this.engine = engine;
         System.out.println("Electric engine started");
     }
